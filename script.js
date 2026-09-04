@@ -1,0 +1,14 @@
+
+const btnOpen = document.getElementById('btn-open');
+const sidebar = document.getElementById('sidebar');
+ 
+btnOpen.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+ 
+document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !btnOpen.contains(event.target)) {
+        sidebar.classList.remove('active');
+    }
+});
+ 
